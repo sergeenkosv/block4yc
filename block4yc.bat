@@ -1,5 +1,9 @@
 rem cd to directory with script
 cd /d %~dp0
+if "%~dp0"=="%CD%" goto :chageddir
+echo We are in %CD%. Files will be generated here.
+pause
+:changeddir
 rem Calculate a timestamp affix
 set startTime=%TIME%
 rem Fix bug with hours < 10
@@ -70,3 +74,4 @@ netsh advfirewall firewall add rule name="Yandex Contest Local TCP" dir=out acti
 netsh advfirewall firewall add rule name="Yandex Contest Local UDP" dir=out action=allow protocol=udp remoteip=dns,dhcp,defaultgateway
 netsh advfirewall firewall add rule name="Yandex Contest Remote" dir=out action=allow protocol=tcp remoteip=37.9.64.225,77.88.21.14,87.250.250.14,87.250.250.200,87.250.251.14,87.250.251.158,93.158.134.14,178.154.131.215,178.154.131.217,213.180.193.14,213.180.204.14
 netsh advfirewall firewall add rule name="Yandex Contest Remote IPv6" dir=out action=allow protocol=tcp remoteip=2a02:6b8::14,2a02:6b8:23::225,2a02:6b8::3:158,2a02:6b8::360
+

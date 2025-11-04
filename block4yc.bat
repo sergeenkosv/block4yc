@@ -1,6 +1,6 @@
 rem cd to directory with script
 cd /d %~dp0
-if "%~dp0"=="%CD%" goto :chageddir
+if "%~dp0"=="%CD%\" goto :changeddir
 echo We are in %CD%. Files will be generated here.
 pause
 :changeddir

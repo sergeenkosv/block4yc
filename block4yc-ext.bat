@@ -72,5 +72,5 @@ netsh advfirewall firewall set rule name=all new enable=no
 rem Create rules
 netsh advfirewall firewall add rule name="Yandex Contest Local TCP" dir=out action=allow protocol=tcp remoteip=dns,dhcp,defaultgateway
 netsh advfirewall firewall add rule name="Yandex Contest Local UDP" dir=out action=allow protocol=udp remoteip=dns,dhcp,defaultgateway
-netsh advfirewall firewall add rule name="Yandex Contest Remote" dir=out action=allow protocol=tcp remoteip=37.9.64.225,77.88.21.119,77.88.21.14,87.250.250.119,87.250.250.14,87.250.250.200,87.250.251.119,87.250.251.14,87.250.251.158,87.250.251.40,93.158.134.14,213.180.193.14,213.180.204.14
-netsh advfirewall firewall add rule name="Yandex Contest Remote IPv6" dir=out action=allow protocol=tcp remoteip=2a02:6b8::1:119,2a02:6b8::14,2a02:6b8:23::225,2a02:6b8::29f,2a02:6b8::3:158,2a02:6b8::360
+netsh advfirewall firewall add rule name="Yandex Contest Remote" dir=out action=allow protocol=tcp remoteip=37.9.64.225,77.88.21.119,77.88.21.14,87.250.250.119,87.250.250.14,87.250.250.200,87.250.251.119,87.250.251.14,87.250.251.158,93.158.134.14,213.180.193.14,213.180.204.14
+netsh advfirewall firewall add rule name="Yandex Contest Remote IPv6" dir=out action=allow protocol=tcp remoteip=2a02:6b8::1:119,2a02:6b8::14,2a02:6b8:23::225,2a02:6b8::3:158,2a02:6b8::360
